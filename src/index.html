@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <section class="weather">
+      <!-- Glass -->
+      <div class="weather__container">
+        <!-- col--1 -->
+        <!-- img src would change depending on what the weather is-->
+        <div class="weather__current">
+          <div class="weather__current__photo">
+            <img src="img/rainy.jpg" alt="rainy" class="banner__img" />
+            <div class="weather__current__desc">
+              <span class="weather__location"
+                >Sta.Maria, Bulacan Philippines</span
+              >
+              <span class="weather__date">Saturday, May 28</span>
+              <!-- logo -->
+              <span class="weather__degrees">32</span>
+              <span class="weather__current--desc">Moderate Rain</span>
+            </div>
+          </div>
+        </div>
+        <!-- col--2 -->
+        <div class="weather__daily">
+          <h2 class="heading__secondary">Daily Forecast</h2>
+          <div class="weather__daily__container">
+            <div class="weather__items">
+              <img
+                src="img/icons/rainy-outline.svg"
+                alt="icon"
+                class="weather__icon"
+              />
+              <span class="weather__desc">Moderate Rain</span>
+              <span class="weather__day">SUN</span>
+            </div>
+
+            <div class="weather__items">
+              <img
+                src="img/icons/rainy-outline.svg"
+                alt="icon"
+                class="weather__icon"
+              />
+              <span class="weather__desc">Light Rain</span>
+              <span class="weather__day">Mon</span>
+            </div>
+
+            <div class="weather__items">
+              <img
+                src="img/icons/rainy-outline.svg"
+                alt="icon"
+                class="weather__icon"
+              />
+              <span class="weather__desc">Moderate Rain</span>
+              <span class="weather__day">Tue</span>
+            </div>
+
+            <div class="weather__items">
+              <img
+                src="img/icons/thunderstorm-outline.svg"
+                alt="icon"
+                class="weather__icon"
+              />
+              <span class="weather__desc">Thunderstorms</span>
+              <span class="weather__day">Wed</span>
+            </div>
+
+            <div class="weather__items">
+              <img
+                src="img/icons/cloudy-outline.svg"
+                alt="icon"
+                class="weather__icon"
+              />
+              <span class="weather__desc">Scattered Clouds</span>
+              <span class="weather__day">Thu</span>
+            </div>
+
+            <div class="weather__items">
+              <img
+                src="img/icons/sunny-outline.svg"
+                alt="icon"
+                class="weather__icon"
+              />
+              <span class="weather__desc">Clear Sky</span>
+              <span class="weather__day">Fri</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

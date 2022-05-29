@@ -1,0 +1,28 @@
+:root {
+  --primaryText: #493d5c;
+  --black: #31293d;
+  --whites: #f9fafb;
+  --cardBackground: #f3f4f6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: url("../img/plum.png");
+  color: var(--black);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}

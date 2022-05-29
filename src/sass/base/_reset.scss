@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  background: url("../img/plum.png");
+  color: var(--black);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
