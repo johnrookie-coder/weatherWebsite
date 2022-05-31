@@ -14,25 +14,34 @@
   </head>
   <body>
     <section class="weather">
-      <!-- Glass -->
       <div class="weather__container">
-        <!-- col--1 -->
-        <!-- img src would change depending on what the weather is-->
         <div class="weather__current">
           <div class="weather__current__photo">
-            <img src="img/rainy.jpg" alt="rainy" class="banner__img" />
+            <img src="img/foggy.jpg" alt="rainy" class="banner__img" />
             <div class="weather__current__desc">
               <span class="weather__location"
-                >Sta.Maria, Bulacan Philippines</span
+                >Sta.Maria, Bulacan, Philippines</span
               >
               <span class="weather__date">Saturday, May 28</span>
-              <!-- logo -->
-              <span class="weather__degrees">32</span>
-              <span class="weather__current--desc">Moderate Rain</span>
+
+              <div class="weather__container__desc">
+                <div class="weather__icon--current">
+                  <img
+                    src="./img/icons/weather-fog.svg"
+                    alt="rainy"
+                    class="weather__icon"
+                  />
+                </div>
+
+                <div class="icon__desc">
+                  <span class="weather__degrees">32°</span>
+                  <span class="weather__current--desc">Mist</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <!-- col--2 -->
+
         <div class="weather__daily">
           <h2 class="heading__secondary">Daily Forecast</h2>
           <div class="weather__daily__container">

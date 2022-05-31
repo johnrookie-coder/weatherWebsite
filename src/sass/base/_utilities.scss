@@ -1,0 +1,26 @@
+//  Utilities
+.heading__secondary {
+  color: inherit;
+  font-family: inherit;
+  font-size: 3.2rem;
+  font-weight: 700;
+
+  margin-bottom: 2.4rem;
+}
+
+.banner__img {
+  border-radius: 24px;
+  object-fit: cover;
+  height: 44rem;
+  width: 100%;
+}
+
+.icon__desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  // border: 2px solid red;
+  height: 12rem;
+  width: 20rem;
+}
