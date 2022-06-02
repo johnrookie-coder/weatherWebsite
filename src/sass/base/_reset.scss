@@ -15,8 +15,9 @@ body {
   margin: 0;
   padding: 0;
 
-  background: url("../img/plum.png");
+  background: url("../img/plum.png") no-repeat center center/cover;
   color: var(--black);
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  user-select: none;
 }

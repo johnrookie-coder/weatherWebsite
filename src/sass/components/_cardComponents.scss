@@ -14,9 +14,9 @@
 
     &__photo {
       position: relative;
-      background: url("./img/rainy.jpg");
       height: 100%;
       width: 100%;
+      margin-top: 2.4rem;
     }
 
     &__desc {
@@ -25,6 +25,7 @@
       width: 100%;
 
       color: var(--whites);
+      font-weight: 700;
       line-height: 1.4;
     }
 
@@ -90,6 +91,11 @@
       justify-content: center;
       height: 12rem;
     }
+
+    &--whites {
+      filter: invert(93%) sepia(36%) saturate(3059%) hue-rotate(178deg)
+        brightness(119%) contrast(95%);
+    }
   }
 
   &__desc {
@@ -146,6 +152,17 @@
       font-size: 6rem;
     }
 
+    .heading__primary {
+      background: linear-gradient(to top left, #6400ff, #382b47) !important;
+      display: inline;
+      background-clip: text !important;
+      -webkit-background-clip: text;
+      color: transparent !important;
+
+      font-family: inherit;
+      font-size: 4.8rem;
+    }
+
     .heading__secondary {
       color: var(--primaryText) !important;
     }
@@ -186,6 +203,11 @@
 
     &__degrees {
       font-size: 4.8rem;
+    }
+
+    .heading__primary {
+      color: var(--whites);
+      font-size: 3.8rem;
     }
 
     .heading__secondary {

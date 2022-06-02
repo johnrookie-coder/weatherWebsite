@@ -10,19 +10,20 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <script defer src="js/main.js"></script>
+    <script defer type="module" src="js/main.js"></script>
   </head>
   <body>
     <section class="weather">
       <div class="weather__container">
         <div class="weather__current">
+          <h1 class="heading__primary">What's the weather today?</h1>
           <div class="weather__current__photo">
             <img
-              src="img/rains-sm.jpg"
+              src="img/clouds-sm.jpg"
               srcset="
-                img/rains-sm.jpg  500w,
-                img/rains-lg.jpg 1000w,
-                img/rains.jpg    1500w
+                img/clouds-sm.jpg  500w,
+                img/clouds-lg.jpg 1000w,
+                img/clouds.jpg    1500w
               "
               sizes="100vw"
               alt="banner image"
@@ -39,7 +40,7 @@
                   <img
                     src="./img/icons/weather-fog.svg"
                     alt="rainy"
-                    class="weather__icon"
+                    class="weather__icon weather__icon--whites"
                   />
                 </div>
 
