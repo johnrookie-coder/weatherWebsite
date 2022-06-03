@@ -2,8 +2,10 @@
 
 import API_KEY from "./key.js";
 
+const weather = document.querySelector(".weather");
 const weatherContainer = document.querySelector(".weather__daily__container");
 const currentWeather = document.querySelector(".weather__current");
+const body = document.body;
 
 let dailyForecast = [];
 
@@ -11,11 +13,11 @@ let dailyForecast = [];
 const getLocation = function () {
   navigator.geolocation.getCurrentPosition(
     function (position) {
-      const { latitude: lat, longitude: long } = position.coords;
+      // const { latitude: lat, longitude: long } = position.coords;
 
       // Thai
-      // const lat = 15.87;
-      // const long = 100.9925;
+      const lat = 15.87;
+      const long = 100.9925;
       // Italy
       // const lat = 41.8719;
       // const long = 12.5674;
@@ -23,7 +25,7 @@ const getLocation = function () {
     },
     function () {
       // Error message
-      alert("Unable to retrieved your location");
+      errMsg();
     }
   );
 };
@@ -316,10 +318,39 @@ const getWeatherAndLocation = async function (lat, long) {
       ),
     ]);
 
+    weather.classList.remove("hidden");
     getTempDesc(data[0], data[1]);
   } catch (err) {
-    console.log(err);
+    errMsg();
   }
 };
 
+// Render error markup
+const errMsg = function () {
+  const markupErr = `
+  <div class="err">
+    <div class="err__msg">
+      <img src="img/icons/denied.svg" alt="denied" class="err__img" />
+      <p>Something went wrong! Please reload your browser and try again.</p>
+      <button class="btn btn--reload">Reload</button>
+    </div>
+  </div>
+  `;
+
+  body.insertAdjacentHTML("beforeend", markupErr);
+  loadEvent();
+};
+
+// Add load event when errorMarkup is instantiated
+const loadEvent = function () {
+  const loadEl = document.querySelector(".btn--reload");
+  loadEl.addEventListener("click", () => {
+    location.reload(true);
+  });
+};
+
 getLocation();
+
+// Todo: Location reload both chrome and firefox
+// Todo: Clean up the HTML markup in the index.html
+// TodO: At night, clear sky but the images is sunny HAHAHAH

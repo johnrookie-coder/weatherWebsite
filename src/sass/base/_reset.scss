@@ -17,7 +17,11 @@ body {
 
   background: url("../img/plum.png") no-repeat center center/cover;
   color: var(--black);
+
   font-family: "Inter", sans-serif;
   font-weight: 400;
   user-select: none;
+
+  min-height: 100vh;
+  width: 100%;
 }

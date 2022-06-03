@@ -8,7 +8,7 @@
     color: transparent;
 
     font-family: inherit;
-    font-size: 4.8rem;
+    font-size: 4.8rem !important;
     font-weight: 700;
   }
 
@@ -36,4 +36,35 @@
 
   height: 12rem;
   width: 20rem;
+}
+
+.err {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0.8rem 2.4rem 0 rgba(31, 38, 135, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 1.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: inherit;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 6rem;
+  margin: 10rem auto;
+  width: 90%;
+  max-width: 50rem;
+  min-height: 24rem;
+
+  &__msg {
+    color: currentColor;
+    font-size: 2rem;
+    line-height: 1.5;
+
+    p {
+      margin-bottom: 2.4rem;
+    }
+  }
 }
