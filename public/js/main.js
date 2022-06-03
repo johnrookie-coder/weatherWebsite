@@ -350,7 +350,3 @@ const loadEvent = function () {
 };
 
 getLocation();
-
-// Todo: Location reload both chrome and firefox
-// Todo: Clean up the HTML markup in the index.html
-// TodO: At night, clear sky but the images is sunny HAHAHAH
