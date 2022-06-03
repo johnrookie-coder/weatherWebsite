@@ -1,7 +1,5 @@
 "use strict";
 
-import API_KEY from "./key.js";
-
 const weather = document.querySelector(".weather");
 const weatherContainer = document.querySelector(".weather__daily__container");
 const currentWeather = document.querySelector(".weather__current");
@@ -13,14 +11,7 @@ let dailyForecast = [];
 const getLocation = function () {
   navigator.geolocation.getCurrentPosition(
     function (position) {
-      // const { latitude: lat, longitude: long } = position.coords;
-
-      // Thai
-      const lat = 15.87;
-      const long = 100.9925;
-      // Italy
-      // const lat = 41.8719;
-      // const long = 12.5674;
+      const { latitude: lat, longitude: long } = position.coords;
       getWeatherAndLocation(lat, long);
     },
     function () {
@@ -314,7 +305,7 @@ const getWeatherAndLocation = async function (lat, long) {
     const data = await Promise.all([
       getJSON(`https://geocode.xyz/${lat},${long}?geoit=json`),
       getJSON(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=hourly,minutely&appid=${API_KEY}`
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=hourly,minutely&appid=a57da3753eacab928ce7915cbe2722d3`
       ),
     ]);
 
