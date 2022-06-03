@@ -36,8 +36,8 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  font-size: clamp(3.6rem, 4vw, 4.8rem) !important;
   font-family: inherit;
-  font-size: 4.8rem !important;
   font-weight: 700;
 }
 .heading__secondary {
@@ -226,7 +226,6 @@ body {
     -webkit-background-clip: text;
     color: transparent !important;
     font-family: inherit;
-    font-size: 4.8rem;
   }
   .weather .heading__secondary {
     color: var(--primaryText) !important;
@@ -271,7 +270,7 @@ body {
   }
   .weather .heading__primary {
     color: var(--whites);
-    font-size: 3.8rem;
+    font-size: clamp(3.2rem, 2vw, 4.8rem);
   }
   .weather .heading__secondary {
     color: var(--whites);

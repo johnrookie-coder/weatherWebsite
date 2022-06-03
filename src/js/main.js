@@ -336,6 +336,7 @@ const errMsg = function () {
 const loadEvent = function () {
   const loadEl = document.querySelector(".btn--reload");
   loadEl.addEventListener("click", () => {
+    location.reload();
     location.reload(true);
   });
 };

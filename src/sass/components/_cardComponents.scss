@@ -166,19 +166,16 @@
       color: transparent !important;
 
       font-family: inherit;
-      font-size: 4.8rem;
     }
 
     .heading__secondary {
       color: var(--primaryText) !important;
     }
   }
-  // Todo: tab
+
   @media (min-width: 768px) {
     &__items {
       background-color: var(--cardBackground) !important;
-      // flex: 1;
-
       width: 48%;
     }
 
@@ -226,7 +223,7 @@
 
     .heading__primary {
       color: var(--whites);
-      font-size: 3.8rem;
+      font-size: clamp(3.2rem, 2vw, 4.8rem);
     }
 
     .heading__secondary {
