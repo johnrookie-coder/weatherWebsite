@@ -3,6 +3,7 @@
 const weather = document.querySelector(".weather");
 const weatherContainer = document.querySelector(".weather__daily__container");
 const currentWeather = document.querySelector(".weather__current");
+const err = document.querySelector(".err");
 const body = document.body;
 
 let dailyForecast = [];
@@ -14,9 +15,9 @@ const getLocation = function () {
       const { latitude: lat, longitude: long } = position.coords;
       getWeatherAndLocation(lat, long);
     },
-    function () {
+    function (err) {
       // Error message
-      errMsg();
+      errMsg(err);
     }
   );
 };
@@ -31,7 +32,7 @@ const getJSON = async function (url) {
 
   if (!response.ok)
     throw new Error(
-      `Something went wrong! Please try ro reload your browser after 3 seconds `
+      `Something went wrong! Please try reload your browser after 3 seconds `
     );
 
   return response.json();
@@ -309,35 +310,49 @@ const getWeatherAndLocation = async function (lat, long) {
       ),
     ]);
 
-    weather.classList.remove("hidden");
-    getTempDesc(data[0], data[1]);
+    if (data !== undefined) {
+      weather.classList.remove("hidden");
+      getTempDesc(data[0], data[1]);
+    }
   } catch (err) {
-    errMsg();
+    errMsg(err);
   }
 };
 
 // Render error markup
-const errMsg = function () {
-  const markupErr = `
-  <div class="err">
-    <div class="err__msg">
-      <img src="img/icons/denied.svg" alt="denied" class="err__img" />
-      <p>Something went wrong! Please reload your browser and try again.</p>
-      <button class="btn btn--reload">Reload</button>
+const errMsg = function (err) {
+  if (err?.code === 1) {
+    const markupErrUser = `
+    <div class="err">
+      <div class="err__msg">
+        <img src="img/icons/denied.svg" alt="denied" class="err__img" />
+        <p>You have blocked permissions to access your location. To access the website please go with your Settings > History and clear your browsing data </p>
+      </div>
     </div>
-  </div>
   `;
+    body.insertAdjacentHTML("beforeend", markupErrUser);
+  } else {
+    const markupErr = `
+    <div class="err">
+      <div class="err__msg">
+        <img src="img/icons/denied.svg" alt="denied" class="err__img" />
+        <p>${err.message}</p>
+        <button class="btn btn--reload">Reload</button>
+      </div>
+    </div>
+    `;
 
-  body.insertAdjacentHTML("beforeend", markupErr);
-  loadEvent();
+    body.insertAdjacentHTML("beforeend", markupErr);
+    loadEvent();
+  }
 };
 
 // Add load event when errorMarkup is instantiated
 const loadEvent = function () {
   const loadEl = document.querySelector(".btn--reload");
   loadEl.addEventListener("click", () => {
-    location.reload();
-    location.reload(true);
+    getLocation();
+    err.remove();
   });
 };
 

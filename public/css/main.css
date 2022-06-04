@@ -31,9 +31,9 @@ body {
 }
 
 .heading__primary {
-  background-image: linear-gradient(to top left, #6400ff, #382b47);
+  background-image: linear-gradient(to top left, #6400ff, #382b47) !important;
   display: inline !important;
-  background-clip: text;
+  background-clip: text !important;
   -webkit-background-clip: text;
   color: transparent;
   font-size: clamp(3.6rem, 4vw, 4.8rem) !important;
@@ -220,7 +220,7 @@ body {
     font-size: 6rem;
   }
   .weather .heading__primary {
-    background: linear-gradient(to top left, #6400ff, #382b47) !important;
+    background-image: linear-gradient(to top left, #6400ff, #382b47) !important;
     display: inline;
     background-clip: text !important;
     -webkit-background-clip: text;

@@ -1,9 +1,9 @@
 //  Utilities
 .heading {
   &__primary {
-    background-image: linear-gradient(to top left, #6400ff, #382b47);
+    background-image: linear-gradient(to top left, #6400ff, #382b47) !important;
     display: inline !important;
-    background-clip: text;
+    background-clip: text !important;
     -webkit-background-clip: text;
     color: transparent;
 
