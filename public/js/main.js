@@ -3,7 +3,6 @@
 const weather = document.querySelector(".weather");
 const weatherContainer = document.querySelector(".weather__daily__container");
 const currentWeather = document.querySelector(".weather__current");
-const err = document.querySelector(".err");
 const body = document.body;
 
 let dailyForecast = [];
@@ -351,8 +350,9 @@ const errMsg = function (err) {
 const loadEvent = function () {
   const loadEl = document.querySelector(".btn--reload");
   loadEl.addEventListener("click", () => {
+    const errEl = document.querySelector(".err");
     getLocation();
-    err.remove();
+    errEl.remove();
   });
 };
 
